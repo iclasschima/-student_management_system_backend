@@ -1,0 +1,32 @@
+POST http://localhost:8000/api/auth/register
+content-type: application/json
+
+{
+    "firstname": "iClass",
+    "lastname": "Chima",
+    "email": "danny@gmail.com",
+    "cohort": 3,
+    "password": "iclasschima"
+}
+
+###
+
+POST http://localhost:8000/api/auth/login
+Content-Type: application/json
+
+{
+    "email": "danny@gmail.com",
+    "password": "iclasschima"
+}
+
+###
+
+POST http://localhost:8000/api/user/add_project
+auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZmE4Y2JiMmQzNmE4ZDI5NGViMzU3ZmMiLCJpYXQiOjE2MDQ4OTg2ODJ9.XgcN_sOuHxin7t_C_s8UW__Dn6jEnrgYOtBRTR1mkhg
+Content-Type: application/json
+
+{
+    "user_id": "5fa8cbb2d36a8d294eb357fc",
+    "title": "onHover Storeman",
+    "start_date": "12-11-2020"
+}
