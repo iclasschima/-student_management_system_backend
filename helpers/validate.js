@@ -28,7 +28,22 @@ const validateProject = (data) => {
     start_date: Joi.date().required(),
   });
 
+  return schema.validate(data);
+};
+
+const validateMessage = (data) => {
+  const schema = Joi.object().keys({
+    user_id: Joi.string().required(),
+    reciever_id: Joi.string().required(),
+    message: Joi.string().required(),
+  });
+
   return schema.validate(data)
 };
 
-module.exports = { validateProject, validateRegister, validateLogin };
+module.exports = {
+  validateProject,
+  validateRegister,
+  validateLogin,
+  validateMessage,
+};
