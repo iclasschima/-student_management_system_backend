@@ -4,13 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-
-    "start": "nodemon index.js"
+    "start": "node index.js",
+    "start:dev": "nodemon index"
   },
 
-  "dev": {
-    "start": "nodemon index.js"
-  },
   "author": "iClass",
   "license": "ISC",
   "dependencies": {
