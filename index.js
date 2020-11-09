@@ -27,4 +27,6 @@ mongoose.connect(
 
 const PORT = process.env.PORT || 8000
 
-app.listen(PORT);
+app.listen(PORT, function() {
+  console.log("Server started.......");
+});
