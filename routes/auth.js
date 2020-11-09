@@ -64,7 +64,6 @@ router.post("/register", async (req, res) => {
     password: hashedPassword,
     projects: [],
     courses: [],
-    messages: [],
     no_of_classes: 0,
   });
 

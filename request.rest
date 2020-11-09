@@ -49,8 +49,8 @@ auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZmE4Y2JiMmQzNmE4ZDI
 Content-Type: application/json
 
 {
-    "user_id": "5fa92b1ec4d6d81a13187fb4",
-    "reciever_id": "5fa7c34d18d38e2545ae2182",
+    "user_id": "5fa8cb7337d20d290cd4549a",
+    "reciever_id": "5fa92b1ec4d6d81a13187fb4",
     "message": "Hello iclass"
 }
 
