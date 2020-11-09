@@ -4,7 +4,12 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node index"
+    "start:dev": "nodemon index.js",
+    "start": "node index.js"
+  },
+
+  "dev": {
+    "start": "nodemon index.js"
   },
   "author": "iClass",
   "license": "ISC",
