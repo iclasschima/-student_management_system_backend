@@ -18,8 +18,8 @@ router.get("/messages/:id", verify, async (req, res) => {
 
 router.post("/send", verify, async (req, res) => {
   const { error } = validateMessage(req.body);
-  const date = await moment().format("LL");
-  const time = await moment().format("LTS");
+  const date = moment().format("LL");
+  const time = moment().format("LTS");
   if (error) {
     return res.send(error.details[0].message);
   }
@@ -35,18 +35,8 @@ router.post("/send", verify, async (req, res) => {
 
   try {
     const reciever = await User.findOne({ _id: reciever_id });
-    const message = {
-      sender_id: user_id,
-      message,
-      date: moment().format("LL"),
-      time,
-    };
-    reciever.messages = [message];
-    console.log(reciever)
-    const {messages} = reciever 
 
-    reciever.messages = [...messages, message]
-    return res.json(messages);
+
   } catch (error) {
     return res.send(error);
   }
