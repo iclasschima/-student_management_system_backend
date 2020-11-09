@@ -4,7 +4,7 @@ content-type: application/json
 {
     "firstname": "iClass",
     "lastname": "Chima",
-    "email": "danny@gmail.com",
+    "email": "oga@gmail.com",
     "cohort": 3,
     "password": "iclasschima"
 }
@@ -15,7 +15,7 @@ POST http://localhost:8000/api/auth/login
 Content-Type: application/json
 
 {
-    "email": "danny@gmail.com",
+    "email": "iclasschima@gmail.com",
     "password": "iclasschima"
 }
 
@@ -30,3 +30,28 @@ Content-Type: application/json
     "title": "onHover Storeman",
     "start_date": "12-11-2020"
 }
+
+###
+
+GET http://localhost:8000/api/users
+auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZmE4Y2JiMmQzNmE4ZDI5NGViMzU3ZmMiLCJpYXQiOjE2MDQ4OTg2ODJ9.XgcN_sOuHxin7t_C_s8UW__Dn6jEnrgYOtBRTR1mkhg
+
+###
+
+GET http://localhost:8000/api/message/messages/5fa7c34d18d38e2545ae2182
+auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZmE4Y2JiMmQzNmE4ZDI5NGViMzU3ZmMiLCJpYXQiOjE2MDQ4OTg2ODJ9.XgcN_sOuHxin7t_C_s8UW__Dn6jEnrgYOtBRTR1mkhg
+
+
+###
+
+POST http://localhost:8000/api/message/send
+auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZmE4Y2JiMmQzNmE4ZDI5NGViMzU3ZmMiLCJpYXQiOjE2MDQ4OTg2ODJ9.XgcN_sOuHxin7t_C_s8UW__Dn6jEnrgYOtBRTR1mkhg
+Content-Type: application/json
+
+{
+    "user_id": "5fa92b1ec4d6d81a13187fb4",
+    "reciever_id": "5fa7c34d18d38e2545ae2182",
+    "message": "Hello iclass"
+}
+
+###

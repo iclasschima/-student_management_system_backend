@@ -1,6 +1,8 @@
 const express = require("express");
 const Auth = require("./routes/auth");
 const User = require("./routes/user");
+const Index = require("./routes/index");
+const Message = require("./routes/message");
 require("dotenv/config");
 const bodyParser = require("body-parser");
 
@@ -12,6 +14,8 @@ app.use(bodyParser.urlencoded({ extended: false }));
 
 app.use("/api/auth", Auth);
 app.use("/api/user", User);
+app.use("/api/message", Message);
+app.use("/api/", Index);
 
 app.get("/", (req, res) => res.send("Hello there"));
 
